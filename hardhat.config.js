@@ -5,12 +5,12 @@ require('dotenv').config();
 
 module.exports = {
   solidity: {
-    version: '0.8.9',
+    version: '0.8.20',
   },
   networks: {
     hardhat: {},
     astar: {
-      url: 'https://eth-sepolia.g.alchemy.com/v2/xK2JBsKJTCXfuz3iKesCyniq-URMcRGQ',
+      url: 'https://astar-mainnet.g.alchemy.com/v2/6ZlZVfEswLzLCnF55WrOn8Da9gbZKVCO',
       accounts: [`0x${process.env.PRIVATE_KEY}`], 
     },
   },
