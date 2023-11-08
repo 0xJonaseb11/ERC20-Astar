@@ -1,13 +1,12 @@
 
 
-import { ethers } from "hardhat";
 const dotenv = require("dotenv").config();
 
 
 
 const main = async () => {
 
-    const Belongings = await hre.ethers.getContratFactory("Belongings");
+    const Belongings = await hre.ethers.getContractFactory("Belongings");
     const belongings = await Belongings.deploy();
 
     // await belongings.deployed();
@@ -25,4 +24,4 @@ const runMain = async () => {
     }
 }
 
-main();
+runMain();
