@@ -1,6 +1,23 @@
 require("@nomicfoundation/hardhat-toolbox");
 
-/** @type import('hardhat/config').HardhatUserConfig */
+// require('@nomiclabs/hardhat-waffle');
+require('dotenv').config(); 
+
 module.exports = {
-  solidity: "0.8.19",
+  solidity: {
+    version: '0.8.9',
+  },
+  networks: {
+    hardhat: {},
+    astar: {
+      url: 'https://eth-sepolia.g.alchemy.com/v2/xK2JBsKJTCXfuz3iKesCyniq-URMcRGQ',
+      accounts: [`0x${process.env.PRIVATE_KEY}`], 
+    },
+  },
+  settings: {
+    optimizer: {
+      enabled: true,
+      runs: 200,
+    },
+  },
 };
