@@ -1,11 +1,8 @@
-
-
 const dotenv = require("dotenv").config();
 
-
+const hre = require("hardhat"); // Import the Hardhat Runtime Environment
 
 const main = async () => {
-
     const Belongings = await hre.ethers.getContractFactory("Belongings");
     const belongings = await Belongings.deploy();
 
